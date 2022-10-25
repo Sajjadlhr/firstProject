@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <title>To Do List in JavaScript</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="containerMain">
+      <div class="container">
+        <div class="list-div">
+          <h1>Pending List</h1>
+          <form action="" class="formList" id="formId">
+            <input
+              type="text"
+              class="showtxt"
+              id="taskinput"
+              placeholder="Add new task..."
+            />
+            <!-- <input type="hidden" class="showtxt" id="saveindex" onclick="" /> -->
+            <button type="submit" class="addtask" id="addBtn">&plus;</button>
+            <button type="button" class="savetask" id="saveBtn">✓</button>
+          </form>
+          <ul class="orderList" id="orderId">
+            <!-- <li class="lineList" id="lineId">
+              <input type="checkbox" class="check" onclick = "addComplete()"/>
+              <label
+                class="task"
+              ></label>
+              <div class="icon">
+                <i class="fa fa-edit" onclick = "editTask()"></i>
+                <i class="fa fa-trash" onclick = "deleteTask()"></i>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+        <div class="list-div">
+          <h1>Complete List</h1>
+          <ul class="orderList" id="completetask"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
