@@ -1,6 +1,10 @@
 let addinputTxt = document.getElementById("taskinput");
 let addTaskbtn = document.getElementById("addBtn");
 let savebtn = document.getElementById("saveBtn");
+let addUlTask = document.getElementById("orderId");
+let addCompletelist = document.getElementById("completetask");
+
+let addinputTxtVal = addinputTxt.value; 
 
 // Api Endpoint
 
@@ -8,7 +12,7 @@ const apiEndPoint = "http://localhost:3000/posts";
 
 addTaskbtn.addEventListener("click", async(e)=>{
     e.preventDefault();
-  let addinputTxtVal = addinputTxt.value;
+
           if(addinputTxtVal.trim() != 0){ 
   const newPost = {
     name: addinputTxtVal,
@@ -52,7 +56,7 @@ let getPosts = async (e)=>{
       }
      const posts = await response.json();
     //  return posts;
-     let addUlTask = document.getElementById("orderId");
+
      posts.forEach((element, index) => {
         addUlTask.innerHTML += `<li class="lineList" id="lineId">
         <input type="checkbox" class="check" onclick = "addComplete(${index})"/>
@@ -80,7 +84,7 @@ let getPosts = async (e)=>{
      let posts = await response.json();
      console.log(posts)
     //  return posts;
-    let addCompletelist = document.getElementById("completetask");    
+    
      posts.forEach((element, index) => {
       if(index === _index){
       addCompletelist.innerHTML += `<li class="lineList" id="lineId">
